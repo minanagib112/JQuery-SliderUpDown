@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Description Toggle</title>
+    <style>
+        .image-container {
+            text-align: center;
+            margin: 20px auto;
+            width: 500px;
+        }
+
+        .description {
+
+            display: none;
+            margin-top: 10px;
+            color: #333;
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="image-container">
+        <img src="imgs/image2.jpg" alt="" id="image">
+        <div class="description" id="description">Tony Stark: "And I am Iron-Man".</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#image").on("click", function () {
+                var description = $("#description");
+
+                description.slideToggle(500);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
